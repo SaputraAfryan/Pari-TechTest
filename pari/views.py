@@ -15,7 +15,7 @@ class ListBooks(APIView):
         Retrieve a list of all items.
     
     POST:
-        Create a new item instance. The request body should contain the item detail.
+        Create a new item instance. The request body should contain the item details.
     """
     
     @swagger_auto_schema(
@@ -29,7 +29,7 @@ class ListBooks(APIView):
         return Response(serializer_class.data)
 
     @swagger_auto_schema(
-        operation_description="Create a new item instance. The request body should contain the item detail.",
+        operation_description="Create a new item instance. The request body should contain the item details.",
         request_body=BookSerializer,
         responses={201: BookSerializer, 400: 'Bad Request'}
     )
@@ -47,13 +47,13 @@ class DetailBooks(APIView):
     Navigate to 'https://example.host/books/{id}'
 
     GET:
-        Retrieve item instance by ID.
+        Retrieve a single item instance by ID.
         
     PUT:
-        Update item instance by ID. The request body should contain the item detail.
+        Update a single item instance by ID. The request body should contain the item details.
         
     DELETE:
-        Delete item instance by ID.
+        Delete a single item instance by ID.
     """
     
     @swagger_auto_schema(
@@ -70,7 +70,7 @@ class DetailBooks(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
       
     @swagger_auto_schema(
-        operation_description="Update item instance by ID. The request body should contain the item detail.",
+        operation_description="Update item instance by ID. The request body should contain the item details.",
         request_body=BookSerializer,
         responses={200: BookSerializer, 400: 'Bad Request', 404: 'Not Found'}
     )  
