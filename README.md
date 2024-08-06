@@ -74,11 +74,11 @@ This project is a RESTful API for performing CRUD operations on items using Djan
 
 ## API Endpoints
 
-- **GET /api/items/**: Retrieve a list of all items.
-- **GET /api/items/{id}/**: Retrieve a single item by ID.
-- **POST /api/items/**: Create a new item. The request body should contain the item details.
-- **PUT /api/items/{id}/**: Update an existing item by ID. The request body should contain the updated item details.
-- **DELETE /api/items/{id}/**: Delete an item by ID.
+- **GET /books/**: Retrieve a list of all items.
+- **GET /books/{id}/**: Retrieve a single item instance by ID.
+- **POST /books/**: Create a new item instance. The request body should contain the item details.
+- **PUT /books/{id}/**: Update a single item instance by ID. The request body should contain the item details.
+- **DELETE /books/{id}/**: Delete a single item instance by ID.
 
 ## Documentation
 
